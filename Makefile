@@ -13,6 +13,7 @@ CFLAGS_BASE := $(CFLAGS) -g -O2 -Wall -D_FILE_OFFSET_BITS=64 \
 CFLAGS      := $(CFLAGS_BASE) -DVERSION='"$(VERSION)"' -DRELEASE_DATE='"$(DATE)"'
 CFLAGS_ARCH := $(CFLAGS_BASE)
 # LDFLAGS = -L/usr/local/lib -I/usr/local/include
+export LINKTYPE=dynamic
 
 HOST_ARCH := $(shell uname -m)
 # Use TARGET as the target architecture if specified.
